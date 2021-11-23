@@ -107,7 +107,6 @@ spring:
         enabled: true
     dynamic:
       druid: # 全局druid参数，绝大部分值和默认保持一致。(现已支持的参数如下,不清楚含义不要乱设置)
-        # 连接池的配置信息
         # 初始化大小，最小，最大
         initial-size: 5
         min-idle: 5
@@ -133,7 +132,7 @@ spring:
         master:
           url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
           username: root
-          password: root
+          password: 1234
           driver-class-name: com.mysql.cj.jdbc.Driver
           # 多数据源配置
           #multi-datasource1:
