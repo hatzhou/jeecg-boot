@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.rany.mapper.Tb01MachineGroupMapper">
+
+
+    <!--关联查询-->
+    <select id="queryGroupByPage" resultType="org.jeecg.modules.rany.entity.Tb01MachineGroup">
+        select t1.*,(
+            select count(1) from tb01_machine i1 ,tb01_machine_group_map i2
+            where i1.id=i2.mid and t1.id=i2.gid
+        ) as sumcurdev from tb01_machine_group t1
+    </select>
+</mapper>
