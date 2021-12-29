@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.rany.mapper.Tb02UserInsExSeqMapper">
+
+   <!-- 根据token查询指令 -->
+    <select id="queryInsByToken" resultType="org.jeecg.modules.rany.entity.Tb02UserInsExSeq">
+		select inskey from  tb02_user_ins_ex_seq  where token = #{token} and execstatus='0' order by execorder
+	</select>
+
+</mapper>
